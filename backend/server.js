@@ -29,6 +29,8 @@ app.use(
 // Body parser
 app.use(express.json());
 
+app.use("/uploads", express.static("uploads"));
+
 // Test route
 app.get("/", (req, res) => {
   res.send("Questionnaire AI backend running");
