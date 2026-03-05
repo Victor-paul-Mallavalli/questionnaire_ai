@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://unrivaled-haupia-fd6d95.netlify.app/",
   credentials: true
 }));
 console.log("OPENAI_API_KEY:", process.env.OPENAI_API_KEY);
