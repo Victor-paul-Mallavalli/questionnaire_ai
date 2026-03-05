@@ -1,0 +1,13 @@
+Security Questionnaire for Vendor Assessment
+
+1. What encryption standards do you use for data at rest and in transit?
+2. How do you ensure HIPAA compliance in your data handling processes?
+3. What authentication methods do you support for user access?
+4. Describe your incident response plan for data breaches.
+5. How often do you conduct security audits and vulnerability assessments?
+6. What is your data backup and disaster recovery strategy?
+7. How do you handle data retention and deletion procedures?
+8. What measures do you take to secure API endpoints?
+9. Describe your employee security training and background check procedures.
+10. What third-party integrations do you support and how are they secured?
+

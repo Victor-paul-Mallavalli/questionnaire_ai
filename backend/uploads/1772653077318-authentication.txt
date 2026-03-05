@@ -1,0 +1,46 @@
+# Authentication & Access Control Policy
+
+## Supported Authentication Methods
+
+### Multi-Factor Authentication (MFA)
+- TOTP (Time-based One-Time Password) via authenticator apps
+- SMS-based MFA (backup option)
+- Hardware security keys (YubiKey) for admin accounts
+
+### Single Sign-On (SSO)
+- SAML 2.0 integration with Okta
+- OAuth 2.0 / OpenID Connect support
+- Microsoft Azure AD integration
+
+### Password Requirements
+- Minimum 12 characters
+- Must include uppercase, lowercase, numbers, and special characters
+- Password history: last 12 passwords cannot be reused
+- Account lockout after 5 failed attempts
+
+### Session Management
+- Session timeout: 30 minutes of inactivity
+- Concurrent session limit: 3 devices
+- Secure session tokens (HTTPOnly, Secure flags)
+- Session invalidation on password change
+
+## API Authentication
+- API keys with expiration dates
+- OAuth 2.0 client credentials flow
+- JWT tokens with 1-hour expiry
+- Refresh tokens with 7-day expiry
+
+## Role-Based Access Control (RBAC)
+
+### User Roles
+- Super Admin: Full system access
+- Admin: Organization management
+- Provider: Patient data access
+- Staff: Limited patient data
+- Viewer: Read-only access
+
+### Permission Matrix
+- Create/Read/Update/Delete per resource type
+- Audit log access for compliance roles
+- Report generation for management roles
+

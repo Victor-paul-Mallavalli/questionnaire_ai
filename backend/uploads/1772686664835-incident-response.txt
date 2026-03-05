@@ -1,0 +1,73 @@
+# Incident Response Plan
+
+## Overview
+HealthTech Solutions maintains a comprehensive incident response plan to ensure rapid detection, containment, and recovery from security incidents.
+
+## Incident Classification
+
+### Critical (Response Time: 1 hour)
+- Data breach involving PHI
+- Ransomware attacks
+- Complete system compromise
+- Unauthorized admin access
+
+### High (Response Time: 4 hours)
+- Partial system compromise
+- Suspected data exfiltration
+- DDoS attacks causing downtime
+- Malware detection
+
+### Medium (Response Time: 24 hours)
+- Failed login attempts
+- Policy violations
+- Minor vulnerabilities
+- Suspicious activity
+
+### Low (Response Time: 72 hours)
+- Phishing attempts
+- Security policy questions
+- Minor configuration issues
+
+## Response Procedures
+
+### 1. Detection & Analysis
+- 24/7 SIEM monitoring
+- Automated alerting system
+- Log analysis within 1 hour
+- Impact assessment within 4 hours
+
+### 2. Containment
+- Network isolation if needed
+- Account suspension for compromised users
+- Patching vulnerable systems
+- Evidence preservation
+
+### 3. Eradication & Recovery
+- Malware removal
+- System rebuilds if necessary
+- Data restoration from backups
+- Security patches applied
+
+### 4. Post-Incident
+- Root cause analysis
+- Incident report generation
+- Policy updates
+- Staff training updates
+
+## Communication Plan
+- Internal stakeholders: Within 1 hour
+- Affected clients: Within 24 hours
+- Regulatory bodies: Within 72 hours (HIPAA requirement)
+- Press/media: Only through PR department
+
+## Recovery Time Objectives
+- Critical systems: 4 hours
+- Non-critical systems: 24 hours
+- Full recovery: 72 hours maximum
+
+## Third-Party Coordination
+- FBI Cyber Division contact
+- Cybersecurity insurance provider
+- Legal counsel on retainer
+- External forensics team (on-call)
+
