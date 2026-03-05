@@ -11,29 +11,37 @@ import questionnaireRoutes from "./routes/questionnaire.routes.js";
 dotenv.config();
 
 const app = express();
-
-app.use(cors({
-  origin: "https://unrivaled-haupia-fd6d95.netlify.app/",
-  credentials: true
-}));
-console.log("OPENAI_API_KEY:", process.env.OPENAI_API_KEY);
 const PORT = process.env.PORT || 5000;
 
-// app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://unrivaled-haupia-fd6d95.netlify.app"
+];
+
+// CORS middleware
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
+
+// Body parser
 app.use(express.json());
+
+// Test route
+app.get("/", (req, res) => {
+  res.send("Questionnaire AI backend running");
+});
+
+// Routes
+app.use("/api/auth", authRoutes);
 app.use("/api/questionnaire", questionnaireRoutes);
 app.use("/api/reference", referenceRoutes);
 app.use("/api/answers", answerRoutes);
 
-
-
-app.use("/api/auth", authRoutes);
-
-// app.get("/", (req, res) => {
-//    res.send("API running");
-// });
-
-app.listen(PORT, () => {
+// Start server
+app.listen(PORT, async () => {
   console.log(`Server running on port ${PORT}`);
-  connectDB();
+  await connectDB();
 });
